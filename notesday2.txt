@@ -1,0 +1,341 @@
+
+
+1.try with resource
+2.ARM: Automatic Resource Management( Exception handling)
+3. from Java 7 Onwards  we can handle mutliple excpetions using a single try catch block.
+
+
+1.OOPS 
+
+Approches of Programming :
+
+1. Procedure Level Programming   (C,Cobol,Basix,Fortran,Pascal)
+
+2. Modular Level Programming   (Fortan,Erlang,VB)
+
+3. OOP Programming.(C++,Java,C#)
+
+
+Differnce Between            PL/OP
+1.In Procedural Level Programming we use or follow Top-Down Approach..
+2. in procedural level languages we use functions which hold the business logic
+3. the data in procedural level programming is public which means that other application can use without any restrictions.
+4. So Proocedural does not gurantee on the security of the data.
+
+	Accounting Software....
+
+1.deposit()
+	{
+	// bl for deposit
+	}	
+	
+2.withdraw()
+	{
+	}
+
+
+3.balance()
+	{
+	}
+
+
+
+
+OOP
+
+1.In OOP Level Programming we use or follow Bottom-UP Approach..
+
+2. in OOP level languages we use CLASS & OBJECT to design or devlop the appln...
+3. the data in OOP level programming is restricted from outside use by using access specfiers.
+
+4. So oop  gurantees on the security of the data.
+
+
+
+Bottom-Up-Approach
+
+
+What is an Object?: An object is a real world entity which has a state & behaviour.
+
+Dog is a RealWorld Object?
+Dog pomerian=new Dog();
+Dog germashepard=new Dog();
+
+Animal: Object( Viirual Information)
+
+Object is something which exists
+if object exists then of course it will have state & behaviour.
+if something is not existing it is not called has an object
+
+1. Watch
+
+2. House
+
+3.Computer
+
+4.Pen
+
+4.Mobile
+
+5.Tv
+
+
+	Accounting Software....
+
+
+1.Identify the objects:  Customers,SavingAccount,FixedDeposit,BalanceSheet
+2. Identify the state & Behaviour of the respective Objects.
+
+class Person // Not allowed
+{
+default String name; // not allowed
+int cno;
+String address;
+char gender;
+String emailid;
+int /String accountno;
+default setName() // not allowed
+{
+}
+setAddress()
+{}
+}
+
+
+
+A class is a blue print  of an Object and also can termend has collection of datamembers/member functions
+
+
+
+Access Speifiers : public,private,protected,default
+
+In c++ by deafult the class is public and in Java by default the class is "default"
+
+Imp: We cannot assign "default" access specfier to class and its members.
+
+
+Custoner obj=new Customer();
+Imp: In Java we use  "new" keyword to create an object or instance of a class.
+
+obj.membervariiable;
+obj.memeberfunction
+
+
+OOPS Features  ---
+
+1. Encapsulation: Hidinng the data from the outside view,Hiding the internal details of the Object is Encapsulation
+
+
+class Customer // Not allowed
+{
+private String name;
+private int cno;
+private String address;
+char gender;
+String emailid;
+int /String accountno;
+
+public String getName()
+{
+retrur name;
+}
+
+
+
+}
+
+
+}//
+
+
+
+
+
+
+
+
+class Transaction
+{
+
+withderaw()
+{
+// bl should not be given direct access
+Customer.getName();
+
+}
+deposit();
+}
+
+
+
+2. Abstraction: Exposing the essential details of an object is called Abstraction
+
+
+
+
+
+3.Inheritance: 
+
+1.With Inherictance we can achieve re-usablity of the code.
+2.Reduce Redundannt / repeated code
+3.Inherinatance in Java is done by (single,multilevel)
+4. No official support for Multiple Inheritance in Java
+5.We achieve inheritance by using a keyowrd "extends"
+6. Inheritance allows to Structure our application from a Genral to Specfic Objects .(Generalization and Specizlization)/ Establish Relationship with object.
+
+
+
+
+4. Polymorhism: 
+1.An Ablity of an object to perform different operations is nothing but polymorhism.
+2. Can be achived by Overloading and Overiding(ie method).
+
+
+
+
+
+OOP Programme
+
+
+
+
+Levels of Abstraction
+UserManufactuer
+
+class Car: will hold details  (will be exposed to all the details of the car
+{
+private materialatisic
+pubilic steering,engine,pertoltak,gearswith,start();
+stop();
+swithhgear()
+}
+
+class UserTechnician
+{
+Car.engine,Car.wheel,sCar.tearing
+}
+
+
+class EndUser
+{
+
+car.start();
+car.stop();
+car.swihgear()
+}
+
+//************************************************************
+
+1. We would be creating class & Objects
+
+2. Different Types of Methods in a class and access those methods.
+a) Non-return type method:  with/ without argument list
+Syntax:
+
+accespfier  modifier void nameofthemethod()
+{
+
+}
+
+
+
+b)return type method:  with/ without argument list
+All return type methods should use return key word to return a value
+
+c)static methods:  with/ without argument list
+
+
+3.Constructors ?
+
+a.Constructors have the same name of a class and its just like a method
+
+syntax:
+
+class Trainee
+	{
+int a;
+
+
+
+		Trainee()
+		{
+			a=10;
+		}		
+
+	
+	void setUpData()
+	{
+	a=20;
+	}
+
+		Trainee(int id,int phoneno,String email)  // Overloaded Constructor
+		{
+
+		}		
+	
+		void Trainee() // invalid constructor
+		{
+
+		}		
+
+		intTrainee() // invalid constructor
+		{
+
+		}		
+
+	}
+
+Trainee t=new Trainee();
+	t.setUpData(); 
+		
+b.Constructor do not have any return type assigned 
+
+c. Constructors should be public reason is we need to construct and object of a class somewhere in another class so its visibilty is import
+
+d.Constructors should be made private only one  we are using "Singleton Design Pattern"
+
+e. We  can have mulitple constructors inside the class (ie Constructor Overloading)
+
+f. By Defaut all classes have a default constructor(ie no argument constructor,if the user doesnt provide a default constructor the compiler will add it).
+
+d. By Using Constructor we achive early initalization(ie all members are intialzed has soon as the object of the class is created).
+
+
+
+4.this                                                 (Later demonstartion  &super (key)).
+
+
+5.import get/set methods
+
+
+6. toString()
+a. is  a Method of Object class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+

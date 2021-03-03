@@ -1,0 +1,282 @@
+						Java Programming
+
+
+
+Prequiste :
+1. Knowledge of any Programming Langage(c,c++(OOPS))....
+
+
+Agenda:
+
+1.Introduction To Java
+
+
+Java was developed By Sun MicroSystems later it was taken Over by Oracle.
+
+Versions of Java:(Time Line)
+Jdk1.0--->1995   ----> System Side Application  (Dictionary)
+Jdk1.1--->1997
+
+
+
+J2SE1.2--->1998----> Playground 
+J2SE1.3--->2000----->Kestrel                     -----> Java2(System Side Application, Web Application Development,Servlets,Jsp,Rmi,RMIiiop,Corba,Collection Framework, AutoBoxing Features)
+J2SE1.4--->2002---->Merlin
+
+J2SE1.5--->2004--->Tiger(AutoBoxing Features,Generics,Collection Framework was re-written by adding Generics Features,for each loop)
+
+J2SE1.6--->2006---->Mustang(Annotations,switch-case evalution with string,concurrent api)
+
+J2SE1.7--->2011---->Dolphin(new try catch block,mutiple exceptions to be handled with a single catch block,nio)
+
+
+
+
+Java 1.8--->2014---->Spider(Lambda expressions,functional interafaces,default methods,streams)
+
+2. Features of Java..
+
+3. What u Require for Java Development...
+A.
+
+1. JDK to be installed on ur machine... (Preferbaly for this Training 1.8 version)
+
+2. Good Editor to write the code. (Notepad,download Eclipse version which will support Jdk1.8 and JEE).
+
+
+
+4. What is Jdk:(Java Development Kit  which provides a enviornment and libraries to start developing applications in java).
+
+
+5. Components of Jdk:
+
+
+When we Intsall JDK all the components listed below.
+
+	JRE:(Java Runtime Env....) Consits(Enviornment to Exceute Java Programmes)
+		(Class Loader,ByteCode verifier,Java API,Runtime Libraries)
+
+
+	JVM:(Java Virual Machine c language)( interprete the byte code) (Java Interpreter,JIT,GC,Threaad Synshronixation)
+
+
+
+	JIT: (Plugin Acts has another compiler ie Just In Time Compiler): Efiiciency of compilation and exceution 
+
+		
+	JDK=JRE+TOOLS to develop Java Applications
+
+	JRE=JVM+librareis to Run Java Prograame
+
+
+6.Java  Memory Management:
+
+
+1.Heap: Stores Objects
+
+
+Young Generation                
+Minor Gc:
+obj1
+obj2
+
+[Eden Generation
+
+obj1
+obj2
+
+
+Survior Memory]
+
+obj1
+obj2
+
+
+Old Generation
+obj1 obj2                            -> Major Gc is called and destroys all objects
+
+
+Permaanent Generation Area not a part of heap it would be generated at Runtime
+
+hold information of metadata of a classes,methods : It is not a part of heap memory
+
+
+
+
+Runtime Context(Constant) Pool
+
+1.complete class sturcture will be stored here
+2.Constatnt,static variables will be stored here
+
+
+Memmory Pool:
+
+String class,String Objects  and Memory Managers are stored Here
+
+2. Stack : 
+Method Specfic Values (All local Varibales),
+		ex
+			method()
+			{
+			int i=0;
+			}
+
+Object Referncees which are referening to some objects in heap memmory will be stored here
+		
+				ex:
+
+	
+				method()
+				{n
+					demo d=new demo();	
+				}	
+					d is a reference varible whichi will be  stored in Stack
+					demo() will be stored in heap
+
+
+
+
+Agenda2 :---> Language Fundamentals
+
+
+1.Data Types
+
+a.Primitive  Types(8) | Every Primitive Type in Java is Associated with a Wrapper Class
+
+	int          ----> Integer      
+	float          ---->Float
+	double---------->Double------------------->Number-------------->Object
+	long----------> Long
+	short-------->Short
+	byte---------->Byte
+
+
+	char-------->Character------------------->Object
+	boolean--------->Boolean-------------->Object
+
+
+
+
+What are the Wrapper Class?
+
+The respectibe type of Data can be store with its respective Object using a Wrapper
+int a=10;  : Fixed Size/ spa
+
+App-Integer a=new Integer(10);   --a  --App1 a
+
+Integer a=10; // or  Integer a=new Integer(10);  // 
+
+
+Object class is Java:   is top most class or parent to all classes (predefined or userdefined)
+
+Where are these Wrapper classes  available?
+In Java all predined classes / libraries are placed within some package.
+Packages in Java are similar to( header files, modules in another programming languages)...
+
+All Wrapper classes are a part of  java.lang package
+
+Note: java.lang package is the package which will be loaded  by deafult by the  jvm 
+
+
+b. Refernece Types:  Which are of the type "class"
+
+Object o;
+Student st;
+Employee e;
+String str;
+
+
+
+
+
+
+2. Keywords
+How do we use a package:
+
+import packagname.*;   
+
+
+
+import packagname.Classname;
+
+3. Syntax of the Language
+
+
+	class  <classname>
+		{
+			// all Declartions of members here
+	
+			// Execution of Java Code starts from here
+
+		public static void main(String a[])// read any comamndline args
+
+			{
+
+			
+			}
+			
+
+		}
+			
+
+class  x
+{
+
+int a; //instance variables  // non-static member  is always dependent upon the class, ie ---> Only when objecy of class is created(ie x obj=new x());
+
+static int b; // static member  is always indepenent upon the class ie(Runtime Constant Pool),
+
+
+}
+
+
+
+4. Set The Enviornment.
+
+1. Install Jdk
+
+2. Set the classpath:
+
+3. check the installation 
+
+4. use a notepad write a code
+
+5. compile the code / and execute the code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
